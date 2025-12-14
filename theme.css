@@ -1,0 +1,278 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#slides-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+
+section.slide {
+  flex: 0 0 100vw;
+  height: 100vh;
+  padding: 50px 20px 20px 50px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+}
+
+#slides-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+section.slide.divider-slide {
+  text-align: center;
+  background: #f0f0f0;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.slide.divider-slide h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+section.slide.divider-slide h3 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 10px 0;
+  text-align: left;
+}
+
+strong {
+  font-weight: bold;
+}
+
+code {
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+}
+
+pre {
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin: 15px 0;
+  overflow-x: auto;
+  border-left: 4px solid #007acc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.slide-number {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  font-size: 0.8em;
+  color: #666;
+  padding: 5px;
+  z-index: 1000;
+}
+
+button.nav-button {
+  position: fixed;
+  bottom: 20px;
+  background: #ddd;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.nav-button:hover {
+  background: #ccc;
+}
+
+button#prev {
+  right: 60px;
+  bottom: 50px;
+}
+
+button#next {
+  right: 20px;
+  bottom: 50px;
+}
+
+textarea {
+  font-family: monospace;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+button {
+  background: #ddd;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+#menuButton {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  padding: 5px 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  color: #000;
+  border-radius: 4px;
+}
+
+#menuDropdown {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: none;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#menuDropdown a {
+  display: block;
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+#menuDropdown a:hover {
+  background: #f0f0f0;
+}
+
+#result {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  background: #f0f0f0;
+}
+
+.matrix {
+  font-family: monospace;
+  margin: 10px 0;
+  padding: 5px;
+  background: #f0f0f0;
+}
+
+.slide:first-child {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.slide:first-child h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.code-block {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+
+.code-block code {
+  background-color: transparent;
+  padding: 0;
+  font-family: inherit;
+}
+
+.javascript {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  section.slide {
+    padding: 10px 10px 10px 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  pre {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
